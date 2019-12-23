@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Последние регистрированные{% endblock %}
+
+{% block content %}
+
+    {% if latest_registrations_list%}
+
+        {% for a in latest_bek_list %}
+            <a href="#">{{a.bek_title}}</a>
+        {% endfor %}
+
+    {% else %}
+        регистрированных нету
+    {% endif %}
+
+{% endblock %}
